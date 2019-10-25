@@ -24,6 +24,15 @@ module Simpler
 
     private
 
+
+    def status(status)
+      @response.status = status
+    end
+
+    def header(header, content_type)
+      @response[header] = content_type
+    end
+
     def extract_name
       self.class.name.match('(?<name>.+)Controller')[:name].downcase
     end
@@ -43,11 +52,17 @@ module Simpler
     end
 
     def params
-      @request.params
+      @request.env['route.params']
     end
 
     def render(template)
-      @request.env['simpler.template'] = template
+      if template.is_a?(Hash) && template.keys.first == :plain
+        header('Content-Type', 'text/plain')
+        @request.env['simpler.template'] = template[:plain]
+        @request.env['simpler.template_format'] = 'plain'
+      else
+        @request.env['simpler.template'] = template
+      end
     end
 
   end
