@@ -2,27 +2,28 @@ require 'erb'
 
 module Simpler
   class View
-
     VIEW_BASE_PATH = 'app/views'.freeze
 
     def initialize(env)
       @env = env
-      @format = @env['simpler.template_format']
+      @format = @env['simpler.template_format'] || 'html'
     end
 
     def render(binding)
-
-      if @format == 'plain'
-        template
-      else
-        template = File.read(template_path)
-
-        ERB.new(template).result(binding)
-      end
-
+      send("render_#{@format}", binding)
     end
 
     private
+
+    def render_plain(_binding)
+      template
+    end
+
+    def render_html(binding)
+      template = File.read(template_path)
+
+      ERB.new(template).result(binding)
+    end
 
     def controller
       @env['simpler.controller']
@@ -44,6 +45,5 @@ module Simpler
 
       Simpler.root.join(VIEW_BASE_PATH, view_path)
     end
-
   end
 end

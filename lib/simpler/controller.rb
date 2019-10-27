@@ -2,7 +2,6 @@ require_relative 'view'
 
 module Simpler
   class Controller
-
     attr_reader :name, :request, :response
 
     def initialize(env)
@@ -23,7 +22,6 @@ module Simpler
     end
 
     private
-
 
     def status(status)
       @response.status = status
@@ -52,7 +50,7 @@ module Simpler
     end
 
     def params
-      @request.env['route.params']
+      @request.params.merge(@request.env['route.params'])
     end
 
     def render(template)
@@ -64,6 +62,5 @@ module Simpler
         @request.env['simpler.template'] = template
       end
     end
-
   end
 end
