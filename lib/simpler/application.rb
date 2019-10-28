@@ -6,9 +6,7 @@ require_relative 'controller'
 
 module Simpler
   class Application
-
     include Singleton
-
     attr_reader :db
 
     def initialize
@@ -28,13 +26,23 @@ module Simpler
 
     def call(env)
       route = @router.route_for(env)
-      controller = route.controller.new(env)
-      action = route.action
+      if route
+        controller = route.controller.new(env)
+        action = route.action
+        env['route.params'] = route.params
 
-      make_response(controller, action)
+        make_response(controller, action)
+      else
+        not_found
+      end
+
     end
 
     private
+
+    def not_found(msg = 'Not Found')
+      [404, {}, [msg]]
+    end
 
     def require_app
       Dir["#{Simpler.root}/app/**/*.rb"].each { |file| require file }
@@ -53,6 +61,5 @@ module Simpler
     def make_response(controller, action)
       controller.make_response(action)
     end
-
   end
 end

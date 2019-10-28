@@ -1,0 +1,138 @@
+I, [2019-10-25T20:32:43.745773 #98043]  INFO -- : REQUEST : GET  /tests
+    Handler: TestsController#index
+    Parameters: {}
+    Response: 200 [text/html] tests/index.html.erb
+
+
+I, [2019-10-25T20:32:56.899169 #98043]  INFO -- : REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 201 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T20:51:15.589095 #98138]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T20:53:30.548959 #98155]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:17:09.995270 #99179]  INFO -- : 
+    REQUEST : GET  /tests
+    Handler: TestsController#index
+    Parameters: {}
+    Response: 200 [text/plain] 
+
+
+I, [2019-10-25T23:18:10.636587 #99179]  INFO -- : 
+    REQUEST : GET  /tests/2
+    Handler: TestsController#show
+    Parameters: {":id"=>"2"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:18:16.142524 #99179]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:18:51.951834 #99179]  INFO -- : 
+    REQUEST : GET  /tests/2
+    Handler: TestsController#show
+    Parameters: {":id"=>"2"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:24:27.435617 #99224]  INFO -- : 
+    REQUEST : GET  /tests?category=back
+    Handler: TestsController#index
+    Parameters: {}
+    Response: 200 [text/plain] 
+
+
+I, [2019-10-25T23:24:32.615368 #99224]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:25:51.701527 #99224]  INFO -- : 
+    REQUEST : GET  /tests
+    Handler: TestsController#index
+    Parameters: {}
+    Response: 200 [text/plain] 
+
+
+I, [2019-10-25T23:26:02.150998 #99242]  INFO -- : 
+    REQUEST : GET  /tests
+    Handler: TestsController#index
+    Parameters: {}
+    Response: 200 [text/html] tests/index.html.erb
+
+
+I, [2019-10-25T23:27:11.978630 #99247]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:14.681363 #99247]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:21.651449 #99256]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:23.150011 #99256]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:23.947454 #99256]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:24.480213 #99256]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:24.715658 #99256]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
+I, [2019-10-25T23:27:24.934366 #99256]  INFO -- : 
+    REQUEST : GET  /tests/1
+    Handler: TestsController#show
+    Parameters: {":id"=>"1"}
+    Response: 200 [text/html] tests/show.html.erb
+
+
